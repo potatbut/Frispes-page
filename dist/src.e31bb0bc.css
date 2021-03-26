@@ -6,7 +6,6 @@
   max-width: 1100px;
   margin: 0 auto;
   position: relative;
-  display: flex;
 }
 .header__body {
   width: 100%;
@@ -46,6 +45,27 @@
   background-color: pink;
 }
 
+@media (max-width: 900px) {
+  .header__menu-burger {
+    padding-top: 10px;
+    display: block;
+  }
+  .header__menu {
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, 0.2);
+    width: 150px;
+    background-color: #fff;
+    position: absolute;
+    margin-top: 220px;
+    right: 150px;
+    display: none;
+  }
+  .header__list {
+    display: block;
+  }
+  .header__list li:first-child {
+    margin-left: 40px;
+  }
+}
 body {
   font-family: "Lato", sans-serif;
   color: black;
