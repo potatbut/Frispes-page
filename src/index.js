@@ -1,14 +1,27 @@
-import './style/style.scss'
+import "./import-jquery"
+import "jquery-ui-dist/jquery-ui.js"
+import "slick-carousel"
+import 'slick-carousel/slick/slick.min';
 
-console.log('KJSDFH')
+import './style/style.scss'
 
 let menuBtn = document.querySelector('.header__menu-burger')
 let menuList = document.querySelector('.header__menu')
-let displayMenu = menuList.style.display = 'block'
 
-console.log(displayMenu)
-
-
-menuBtn.addEventListener('click', function () {
-  menuList.style.display = !displayMenu
+$(menuBtn).click(function() {
+  if (!menuList.classList.contains("show")) {
+    $(menuList).addClass("show")
+  } else {
+    $(menuList).removeClass("show")
+  }
 })
+
+$('.imageSlider').slick({
+  arrows: false,
+  dots: true,
+})
+
+$( ".slick-slide" ).each(function( index ) { 
+  $( this ).css('margin-top',
+  ($('.slider').height()-$(this).height())/2+'px' );
+});

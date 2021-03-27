@@ -50,6 +50,7 @@
 }
 
 
+
 @media (max-width: 900px) {
   .header {
     &__body {
@@ -57,9 +58,9 @@
     &__menu-burger {
       padding-top: 10px;
       display: block;
+      cursor: pointer;
     }
     &__menu {
-      box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
       width: 150px;
       background-color: #fff;
       position: absolute;
@@ -74,4 +75,10 @@
       display: block;
     }
   }
+
+  .show {
+    display: block;
+    z-index: 5000;
+  }
+  
 } 

@@ -1,5 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 @import './header.scss';
+@import './content-hero-section.scss';
+
+$slick-font-path: "../../node_modules/slick-carousel/slick/fonts/" !default;
+$slick-font-family: "slick" !default;
+$slick-loader-path: "../../node_modules/slick-carousel/slick/" !default;
+$slick-arrow-color: black !default; 
+
+@import "~slick-carousel/slick/slick";
+@import "~slick-carousel/slick/slick-theme";
+
+
+
+
 
 body {
   font-family: 'Lato', sans-serif;
@@ -24,4 +37,3 @@ button {
 ul {
   padding: 0;
 }
-
