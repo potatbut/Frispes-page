@@ -16,12 +16,18 @@ $(menuBtn).click(function() {
   }
 })
 
-$('.imageSlider').slick({
+$('.hero-imageSlider').slick({
   arrows: false,
   dots: true,
 })
 
-$( ".slick-slide" ).each(function( index ) { 
-  $( this ).css('margin-top',
-  ($('.slider').height()-$(this).height())/2+'px' );
-});
+$('.center').slick({
+  centerMode: true,
+  centerPadding: '0px',
+  slidesToShow: 3, 
+  dots: true,
+  arrows: true,
+  appendArrows:'.slider-arrows',
+  prevArrow:'<span class="slider-arrow arrow__prev"></span>',
+  nextArrow:'<span class="slider-arrow arrow__next"></span>',
+})

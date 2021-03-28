@@ -26,12 +26,13 @@
       width: 100%;
     }
   }
+  .slick-dots li button:before {
+    background-color: yellow;
+    margin-top: -60px;
+  }
+  
 }
 
-.slick-dots li button:before {
-  background-color: yellow;
-  margin-top: -60px;
-}
 
 @media (max-width: 900px) {
   
