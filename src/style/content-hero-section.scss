@@ -1,18 +1,31 @@
-.content-hero-section {
+.introducing-section {
   max-width: 1110px;
-  margin: auto;
+  margin: 50px auto;
+  &__intro {
+    height: 30px;
+    width: 200px;
+    font-size: 20px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    img {
+      margin: auto;
+    }
+  }
   &__content {
     display: flex;
     justify-content: space-between;
   }
   &__title{
+    color: #10375C;
     font-size: 52px;
     max-width: 667px;
+    font-family: 'Lora', serif;
   }
   &__subtitle {
     max-width: 382px;
     line-height: 30px;
     font-size: 20px;
+    color: #6A6A6A;
   }
   .imageSlider {
     max-width: 1100px;
@@ -26,14 +39,39 @@
       width: 100%;
     }
   }
-  .slick-dots li button:before {
-    background-color: yellow;
-    margin-top: -60px;
+  .slick-dots {
+    & .slick-active {
+      width: 40px;
+      background-color: #FF5722;
+      opacity: 1;
+    }
+    bottom: 40px;
+    li {
+      margin: 0 2px;
+      width: 16px;
+      height: 4px;
+      background-color: white;
+      opacity: 0.5;
+      button::before {
+        content: '';
+      }
+      
+    }
   }
-  
 }
 
-
-@media (max-width: 900px) {
-  
+@media (max-width: 992px) {
+  .introducing-section {
+    max-width: 900px;
+    margin-top: 20px;
+    &__title {
+      font-size: 2.2rem;
+      margin-top: 5px;
+    }
+    &__subtitle {
+      margin-bottom: 10px;
+      max-width: 80%;
+      font-size: 1rem;
+    }
+  }
 }

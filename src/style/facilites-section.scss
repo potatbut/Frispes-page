@@ -1,0 +1,50 @@
+.facilites-section {
+  margin: auto;
+  max-width: 1100px;
+  &__intro {
+    height: 30px;
+    width: 240px;
+    font-size: 20px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    img {
+      margin: auto;
+    }
+  }
+  &__title {
+    max-width: 50%;
+    color: #10375C;
+    font-size: 40px;
+    font-family: "Lora", serif;
+  }
+  &__menu {
+    display: flex;
+    margin-top: 50px;
+  }
+  &__list {
+    width: 40%;
+     ul {
+      margin-left: 0; 
+      padding-left: 0; 
+    }
+    li {
+      display: flex;
+      padding-left: 10px;
+      list-style-type: none;
+      height: 72px;
+      width: 293px;
+      font-size: 20px;
+      align-items: center;
+      justify-content: start;
+      &:hover {
+        background: #FF5722;
+        color: #fff;
+        -webkit-box-shadow: 5px 5px 17px -5px #FF5722; 
+        box-shadow: 5px 5px 17px -5px #FF5722;
+      }
+    }
+  }
+  &__image {
+    margin-right: 20px;
+  }
+}

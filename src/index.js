@@ -37,6 +37,12 @@ $('.space-slider').slick({
         slidesToShow: 2,
         centerMode: false,
       }
+    },{
+      breakpoint: 730,
+      settings: {
+        slidesToShow: 1,
+        centerMode: false,
+      }
     },
   ]
 })

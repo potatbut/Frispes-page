@@ -1,7 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@700&display=swap');
+
+
 @import './header.scss';
 @import './content-hero-section.scss';
 @import './content-space-section.scss';
+@import './support-section.scss';
+@import './facilites-section.scss';
 
 $slick-font-path: "../../node_modules/slick-carousel/slick/fonts/" !default;
 $slick-font-family: "slick" !default;
@@ -16,6 +21,7 @@ $slick-arrow-color: black !default;
 
 
 body {
+  font-size: 16px;
   font-family: 'Lato', sans-serif;
   color: black;
 }
