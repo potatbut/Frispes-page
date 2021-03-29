@@ -21,13 +21,23 @@ $('.hero-imageSlider').slick({
   dots: true,
 })
 
-$('.center').slick({
+$('.space-slider').slick({
   centerMode: true,
   centerPadding: '0px',
   slidesToShow: 3, 
   dots: true,
   arrows: true,
-  appendArrows:'.slider-arrows',
-  prevArrow:'<span class="slider-arrow arrow__prev"></span>',
-  nextArrow:'<span class="slider-arrow arrow__next"></span>',
+  appendArrows:'.space-section__arrows',
+  prevArrow:'<span class="slider-arrow space-section__arrow_prev"></span>',
+  nextArrow:'<span class="slider-arrow space-section__arrow_next"></span>',
+  responsive: [
+    {
+      breakpoint: 1080,
+      settings: {
+        slidesToShow: 2,
+        centerMode: false,
+      }
+    },
+  ]
 })
+
