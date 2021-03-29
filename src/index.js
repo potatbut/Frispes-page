@@ -50,8 +50,6 @@ $('.space-slider').slick({
 
 
 $('.gallery-slider').slick({
-  /* centerMode: true,
-  centerPadding: '0px', */
   slidesToShow: 3,
   arrows: true,
   appendArrows:'.gallery-section__arrows',
@@ -81,4 +79,13 @@ $('.gallery-slider').on('afterChange', function () {
   $('.gallery-slider .slick-active').removeClass('slick-select')
   $('.gallery-slider .slick-active:first').addClass('slick-select')
   console.log( $('.gallery-slider .slick-active:first'))
+})
+
+$('.reviews-slider').slick({
+  slidesToShow: 2.5,
+  infinite: false,
+  dots: true,
+  appendArrows:'.reviews-section__arrows',
+  prevArrow:'<span class="slider-arrow reviews-section__arrow_prev"></span>',
+  nextArrow:'<span class="slider-arrow reviews-section__arrow_next"></span>',
 })

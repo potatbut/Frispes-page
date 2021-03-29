@@ -1,0 +1,30 @@
+.client-section {
+  max-width: 1110px;
+  margin: auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  &__title{
+    text-align: center;
+    width: 800px;
+    font-size: 40px;
+    font-family: 'Lora', serif;
+    color: #10375C;
+    margin-bottom: 25px;
+  }
+  &__subtitle {
+    text-align: center;
+    width: 800px;
+    width: 452px;
+    font-size: 18px;
+    color: #9A9A9A;
+    margin-bottom: 25px;
+  }
+  &__clients {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+}
