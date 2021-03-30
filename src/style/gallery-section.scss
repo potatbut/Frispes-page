@@ -13,7 +13,7 @@
     }
   }
   &__head {
-    width: 80%;
+    width: 1200px;
     display: flex;
     justify-content: flex-end;
     margin-bottom: 30px;
@@ -60,24 +60,24 @@
       .gallery-wrapper {
         &_first {
           background-image: url('../assets/image4.webp');
-          transition: all .5s ease-out;
+          transition: all .5s ease-;
           
         }
         &_second {
           background-image: url('../assets/image5.webp');
-          transition: all .5s ease-out;
+          transition: all .5s ease-;
         }
         &_third {
           background-image: url('../assets/image3.webp');
-          transition: all .5s ease-out;
+          transition: all .5s ease-;
         }
         &_fourth {
           background-image: url('../assets/image6.webp');
-          transition: all .5s ease-out;
+          transition: all .5s ease-;
         }
         &_fifth {
           background-image: url('../assets/image1.webp');
-          transition: all .5s ease-out;
+          transition: all .5s ease-;
         }
       }
     }

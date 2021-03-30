@@ -12,6 +12,7 @@
 @import './reviews-section.scss';
 @import './faq-section.scss';
 @import './news-section.scss';
+@import './footer.scss';
 
 $slick-font-path: "../../node_modules/slick-carousel/slick/fonts/" !default;
 $slick-font-family: "slick" !default;
@@ -24,11 +25,13 @@ $slick-arrow-color: black !default;
 
 
 
-
 body {
   font-size: 16px;
   font-family: 'Lato', sans-serif;
   color: black;
+  width: 100%;
+  height: 100%;
+  margin: 0;
 }
 
 a {
@@ -48,4 +51,8 @@ button {
 
 ul {
   padding: 0;
+}
+
+li {
+  list-style-type: none;
 }
