@@ -38,7 +38,7 @@ $('.space-slider').slick({
         centerMode: false,
       }
     },{
-      breakpoint: 730,
+      breakpoint: 780,
       settings: {
         slidesToShow: 1,
         centerMode: false,
@@ -46,7 +46,6 @@ $('.space-slider').slick({
     },
   ]
 })
-
 
 
 $('.gallery-slider').slick({
@@ -63,7 +62,7 @@ $('.gallery-slider').slick({
         centerMode: false,
       }
     },{
-      breakpoint: 730,
+      breakpoint: 780,
       settings: {
         slidesToShow: 1,
         centerMode: false,
@@ -73,13 +72,17 @@ $('.gallery-slider').slick({
 })
 
 
-$('.gallery-slider .slick-active:first').addClass('slick-select')
-
-$('.gallery-slider').on('afterChange', function () {
-  $('.gallery-slider .slick-active').removeClass('slick-select')
+if ($(window).width() > 800) {
   $('.gallery-slider .slick-active:first').addClass('slick-select')
-  console.log( $('.gallery-slider .slick-active:first'))
-})
+
+  $('.gallery-slider').on('afterChange', function () {
+    $('.gallery-slider .slick-active').removeClass('slick-select')
+    $('.gallery-slider .slick-active:first').addClass('slick-select')
+  })
+} else {
+  $('.gallery-slider .slick-active').removeClass('slick-select')
+}
+
 
 $('.reviews-slider').slick({
   slidesToShow: 2.5,
@@ -88,4 +91,19 @@ $('.reviews-slider').slick({
   appendArrows:'.reviews-section__arrows',
   prevArrow:'<span class="slider-arrow reviews-section__arrow_prev"></span>',
   nextArrow:'<span class="slider-arrow reviews-section__arrow_next"></span>',
+  responsive: [
+    {
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 2,
+        centerMode: false,
+      }
+    },{
+      breakpoint: 780,
+      settings: {
+        slidesToShow: 1,
+        centerMode: false,
+      }
+    }
+  ]
 })

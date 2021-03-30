@@ -3,27 +3,22 @@
   margin: auto;
   &__head {
     max-width: 1110px;
-    display: flex;
-    justify-content: space-between;
+    @include flex-space;
     margin: 20px auto;
   }
   &__title{
     text-align: center;
     font-size: 51px;
     font-size: 40px;
-    font-family: 'Lora', serif;
-    color: #10375C;
+    @include heading;
   }
   &__subtitle {
     width: 452px;
     font-size: 18px;
-    color: #9A9A9A;
+    color: $grey;
   }
   &__arrows{
-    display: flex;
-    justify-content: space-between;
-    width: 168px;
-    cursor:pointer;
+    @include arrows;
   }
   &__arrow_prev {
     content: url("../assets/arrow1.svg");
@@ -41,10 +36,28 @@
       width: 350px;
       margin: auto;
     }
+    .slick-dots {
+      & .slick-active {
+        width: 40px;
+        background-color: $brand-color-orange;
+        opacity: 1;
+      }
+      li {
+        margin: 0;
+        width: 40px;
+        height: 4px;
+        background-color: grey;
+        opacity: 0.5;
+        button::before {
+          content: '';
+        }
+        
+      }
+    }
     &__slide {
       .wrapper {
         &_first {
-          background-color: #10375C;
+          background-color: $brand-color-dark;
           display: grid;
           grid-template-rows: 120px 60px 120px auto;
           align-items: end;
@@ -113,7 +126,7 @@
         transition-timing-function: ease;
         transition: 0.2s;
         cursor: pointer;
-        background-color: #FF5722;
+        background-color: $brand-color-orange;
       }
       
       &__text:hover {
@@ -143,31 +156,65 @@
 }
 
 
-@media (max-width: 992px) {
+@media (max-width: 1200px) {
   .space-section {
-    max-width: 900px;
+    max-width: $responsive-large;
+  }
+}
+
+@media (max-width: 991px) {
+  .space-section{ 
+    max-width: $responsive-medium;
     &__head {
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-    &__arrows{
-      display: flex;
-      justify-content: space-between;
-      width: 90px;
-      cursor:pointer;
-    }
-    &__arrow_prev {
-      content: url("../assets/arrow1.svg");
-      width:25px;
-      height:30px;
-    }
-    &__arrow_next {
-      content: url("../assets/arrow2.svg");
-      width:50px;
-      height:30px;
+      align-items: center;
     }
   }
 }
 
+@media (max-width: 768px) {
+  .space-section{ 
+    max-width: $responsive-small;
+    &__head {
+      display: block;
+    }
+    &__title {
+      font-size: 1.8rem;
+      float: left;
+      margin: 15px;
+    }
+    &__subtitle {
+      font-size: 1rem;
+    }
+    &__arrows {
+      width: 90px;
+    }
+    &__arrow_prev{
+      width: 30px;
+    }
+    &__arrow_next {
+      width: 50px;
+    }
+  }
+}
 
-
+@media (max-width: 480px) {
+  .space-section {
+    &__title {
+      float: none;
+    }
+    &__subtitle {
+      display: none;
+    }
+    &__arrows {
+      margin: auto;
+    }
+    .space-slider {
+      &__wrapper {
+        height: 380px;
+        width: 280px;
+      }
+    
+      
+    }
+  }
+}

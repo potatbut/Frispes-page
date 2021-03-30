@@ -4,20 +4,18 @@
   display: grid;
   margin-top: 100px;
   &__title {
-    color: #10375C;
+    @include heading;
     font-size: 40px;
-    font-family: 'Lora', serif;
     width: 578px;
     margin: 0 auto 90px;
   }
   &__links {
-    display: flex;
-    justify-content: space-between;
+    @include flex-space;
   }
   &__button {
     margin: auto;
     width: 150px;
-    color: #FF5722;
+    color: $brand-color-orange;
     display: grid;
     grid-template-columns: 120px 10px;
   }
@@ -36,11 +34,11 @@
       width: 270px;
       height: 171px;
       font-size: 26px;
-      font-family: 'Lora', serif;
       display: flex;
       justify-content: center;
       align-items: center;
       text-align: center;
+      font-family: 'Lora', serif;
     }
     &__button {
       margin: auto;
@@ -50,23 +48,54 @@
       align-items: center;
       width: 64px;
       height: 48px;
-      background: #FF5722;
+      background: $brand-color-orange;
       -webkit-box-shadow: 5px 4px 14px -4px #868686; 
       box-shadow: 5px 4px 14px -4px #868686;
     }
     &:hover {
       cursor: pointer;
       transform: scale(1.1);
-      background: #FF5722;
+      background: $brand-color-orange;
       .faq-link{
         &__title {
           color: #fff;
         }
         &__button {
           background: #fff;
-          color: #FF5722;
+          color: $brand-color-orange;
         }
       }
     }
+  }
+}
+
+@media (max-width: 1200px) {
+  .faq-section {
+    max-width: $responsive-large;
+    display: block;
+    &__links {
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .faq-section {
+    max-width: $responsive-small;
+    &__title {
+      width: 100%;
+      font-size: 1.5rem;
+    }
+    &__links {
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .faq-section {
+    max-width: $responsive-xtra-small;
   }
 }

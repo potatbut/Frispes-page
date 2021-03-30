@@ -10,24 +10,22 @@
   }
   &__head {
     margin-bottom: 40px;
-    display: flex;
-    justify-content: space-between;
+    @include flex-space;
     align-items: center;
   }
   &__title{
     text-align: center;
-    font-size: 51px;
+    font-size: 52px;
     font-size: 40px;
-    font-family: 'Lora', serif;
-    color: #10375C;
+    @include heading;
   }
   &__more a{
     height: 24px;
     margin: auto;
-    width: 150px;
-    color: #FF5722;
+    width: 100px;
+    color: $brand-color-orange;
     display: grid;
-    grid-template-columns: 80px 10px;
+    grid-template-columns: 80px 20px;
   }
   .news-content {
     display: grid;
@@ -55,12 +53,11 @@
     &__name {
       font-size: 18px;
       line-height: 28px;
-      color: #10375C;
+      color: $brand-color-dark;
     }
     &__career {
-      font-size: 16px;
       line-height: 26px;
-      color: #9A9A9A;
+      color: $grey;
     }
     &__item {
       
@@ -78,13 +75,12 @@
           &__title_large {
             font-size: 32px;
             line-height: 41px;
-            color: #222831;
+            color: $black;
             font-family: 'Lora', serif;
           }
         }
       }
       &_small {
-        
         width: 350px;
         height: 320px;
         background-color: #fff;
@@ -97,9 +93,76 @@
       }
     }
     &__subtitle {
-      font-size: 16px;
       line-height: 26px;
-      color: #9A9A9A;
+      color: $grey;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .news-section {
+    &__wrapper {
+      max-width: $responsive-large;
+    }
+    .news-content {
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+}
+@media (max-width: 992px) {
+  .news-section  {
+    &__title {
+      font-size: 1.6rem;
+    }
+    &__wrapper {
+      max-width: $responsive-medium;
+    }
+    .news-content {
+      &__item {
+        &_large {
+          display: none;
+        }
+        &_small {
+          width: 250px;
+
+        }
+      }
+      &__image {
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .news-section {
+    &__head {
+      display: block;
+    }
+    &__wrapper {
+      max-width: $responsive-small;
+    }
+    .news-content {
+      &__item {
+        &_small {
+          width: 150px;
+          height: 230px;
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 480px) {
+  .news-section {
+    &__wrapper {
+      max-width: $responsive-xtra-small;
     }
   }
 }

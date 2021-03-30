@@ -1,0 +1,49 @@
+// colors
+
+$brand-color-dark: #10375C;
+$black: #222831;
+$grey: #9A9A9A;
+$brand-color-orange: #FF5722;
+$dark-blue: #0D2C4A;
+$red: #DD2C00;
+
+//  sizes 
+
+$responsive-large: 900px;
+$responsive-medium: 700px;
+$responsive-small: 420px;
+$responsive-xtra-small: 310px;
+
+
+// mixin
+
+@mixin alignment-block {
+  margin: auto;
+  max-width: 1100px;
+}
+
+@mixin flex-space {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin arrows {
+  display: flex;
+  justify-content: space-between;
+  width: 168px;
+  cursor:pointer;
+}
+
+@mixin heading {
+  color: $brand-color-dark;
+  font-family: 'Lora', serif;
+}
+
+@mixin intro-bar {
+  font-size: 20px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    img {
+      margin: auto;
+    }
+}

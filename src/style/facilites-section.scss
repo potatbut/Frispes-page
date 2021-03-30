@@ -1,21 +1,15 @@
 .facilites-section {
-  margin: auto;
-  max-width: 1100px;
+  @include alignment-block;
+  padding-top: 100px;
   &__intro {
-    height: 30px;
     width: 240px;
-    font-size: 20px;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    img {
-      margin: auto;
-    }
+    height: 30px;
+    @include intro-bar;
   }
   &__title {
     max-width: 50%;
-    color: #10375C;
     font-size: 40px;
-    font-family: "Lora", serif;
+    @include heading;
   }
   &__menu {
     display: flex;
@@ -37,14 +31,98 @@
       align-items: center;
       justify-content: start;
       &:hover {
-        background: #FF5722;
+        background: $brand-color-orange;
         color: #fff;
-        -webkit-box-shadow: 5px 5px 17px -5px #FF5722; 
-        box-shadow: 5px 5px 17px -5px #FF5722;
+        -webkit-box-shadow: 5px 5px 17px -5px $brand-color-orange; 
+        box-shadow: 5px 5px 17px -5px $brand-color-orange;
       }
     }
   }
   &__image {
     margin-right: 20px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .facilites-section {
+    max-width: $responsive-large;
+    &__list {
+      width: 30%;
+    }
+    &__image img {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .facilites-section {
+      max-width: $responsive-medium;
+      &__title {
+        max-width: 700px;
+        text-align: center;
+      }
+      &__list {
+        width: 350px;
+        li {
+          margin: auto;
+          height: 30px;
+          text-align: center;
+          font-size: 1rem;
+        }
+      }
+      &__image img {
+        width: 350px;
+      }
+  }
+}
+
+@media (max-width: 768px) {
+  .facilites-section {
+    max-width: $responsive-small;
+    &__title {
+      max-width: 400px;
+      font-size: 1.7rem;
+      text-align: left;
+    }
+    &__list {
+      width: 200px;
+      li {
+        width: 180px;
+        margin: auto;
+        height: 30px;
+        text-align: center;
+        font-size: 1rem;
+      }
+    }
+    &__image {
+      display: grid;
+      align-items: center;
+    img {
+      width: 200px;
+    }
+  }
+}
+}
+
+@media (max-width: 480px) {
+  .facilites-section {
+    max-width: $responsive-xtra-small;
+    padding-top: 30px;
+    &__menu {
+      margin: 0;
+    }
+    &__list {
+      width: 100%;
+      & ul {
+        color: #fff;
+        text-shadow: black 1px 5px 5px;
+        background-size: cover;
+        background-image: url('../assets/image6.webp');
+      }
+    }
+    &__image {
+      display: none;
+    }
   }
 }

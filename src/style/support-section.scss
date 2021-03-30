@@ -1,6 +1,5 @@
 .support-section {
-  max-width: 1100px;
-  margin: 200px auto;
+  @include alignment-block;
   display: flex;
   &__content {
     width: 51%;
@@ -26,7 +25,7 @@
   &__content_blue {
     width: 49%;
     height: 421px;
-    background-color: #10375C;
+    background-color: $brand-color-dark;
     color: #fff;
     display: grid;
     grid-template-columns: 433px;
@@ -35,7 +34,11 @@
     align-items: end;
   }
   &__headline{
-    font-size: 20px;
+    @include intro-bar;
+    svg {
+      margin: auto;
+    }
+    width: 217px;
   }
   &__title {
     font-size: 40px;
@@ -51,7 +54,6 @@
 @media (max-width: 992px) {
   .support-section {
     margin-top: 50px;
-    max-width: 900px;
     display: block;
     &__content {
       width: 100%;
@@ -64,4 +66,26 @@
     }
   }
   
+}
+@media (max-width: 480px) {
+  .support-section {
+    max-width: $responsive-small;
+    .support-item {
+      width: 150px;
+      height: 70px;
+      display: grid;
+      grid-template-columns: auto 100px;
+      font-size: 0.8rem;
+      &__numeral {
+        font-size: 1.5rem;
+      }
+    } 
+    &__content_blue {
+      width: 100%;
+      grid-template-columns: 280px;
+      grid-template-rows: 40px 150px 210px;
+      font-size: 0.8rem;
+    }
+  }
+ 
 }

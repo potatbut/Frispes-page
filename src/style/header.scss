@@ -1,24 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
 
 .header {
-  margin-top: 50px;
+  padding-top: 50px;
   width: 100%;
   &__container {
-    max-width: 1100px;
-    margin: 0 auto;
+    @include alignment-block;
     position: relative;
   }
   &__body {
     width: 100%;
-    display: flex;
-    justify-content: space-between;
+    @include flex-space;
     height: 43px;
     align-items: center;
   }
   &__logo {
     font-size: 24px;
     font-family: 'Playfair Display', serif;
-    color: #10375C;
+    color: $brand-color-dark;
   }
   &__menu-burger {
     display: none;
@@ -38,7 +36,7 @@
   }
   &__link{
     &:hover {
-      color: #FF5722;
+      color: $brand-color-orange;
     }
   }
   &__buttons {
@@ -46,12 +44,12 @@
     display: flex;
     height: 100%;
     & button { 
-      color: #FF5722;
+      color: $brand-color-orange;
       &:hover {
         color: #fff;
-        background-color: #FF5722;
-        -webkit-box-shadow: 5px 5px 17px -5px #FF5722; 
-        box-shadow: 5px 5px 17px -5px #FF5722;
+        background-color: $brand-color-orange;
+        -webkit-box-shadow: 5px 5px 17px -5px $brand-color-orange; 
+        box-shadow: 5px 5px 17px -5px $brand-color-orange;
       }
     }
   }
@@ -63,13 +61,18 @@
   }
 }
 
-
+@media (max-width: 1200px) {
+  .header {
+    max-width: 900px;
+    margin: auto;
+  }
+}
 
 @media (max-width: 992px) {
   .header {
-    margin-top: 20px;
+    padding-top: 30px;
     &__container {
-      max-width: 900px;
+      max-width: $responsive-large;
     }
     &__menu-burger {
       padding-top: 10px;
@@ -96,3 +99,37 @@
     z-index: 5000;
   }
 } 
+
+
+@media (max-width: 991px) {
+  .header {
+    &__container {
+      max-width: $responsive-medium;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding-top: 10px;
+    &__container {
+      max-width: $responsive-small;
+    
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding-top: 10px;
+    &__container {
+      max-width: $responsive-xtra-small;
+    }
+    &__buttons {
+      width: 120px;
+    }
+    &__menu-burger {
+      display: none;
+    }
+  }
+}

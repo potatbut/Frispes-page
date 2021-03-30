@@ -1,27 +1,18 @@
 .gallery-section {
-  margin: auto;
+  @include alignment-block;
   margin-top: 100px;
-  max-width: 1100px;
   &__intro {
-    height: 30px;
     width: 260px;
-    font-size: 20px;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    img {
-      margin: auto;
-    }
+    height: 30px;
+    @include intro-bar;
   }
   &__head {
-    width: 1200px;
+    width: 960px;
     display: flex;
     justify-content: flex-end;
     margin-bottom: 30px;
     position: absolute;
     z-index: 9999;
-  }
-  &__wrapper {
-    width: 50%;
   }
   .slider-for {
     position: absolute;
@@ -29,15 +20,11 @@
     z-index: 6996;
   }
   &__title {
-    color: #10375C;
+    @include heading;
     font-size: 40px;
-    font-family: 'Lora', serif;
   }
   &__arrows{
-    display: flex;
-    justify-content: space-between;
-    width: 168px;
-    cursor:pointer;
+    @include arrows;
   }
   &__arrow_prev {
     content: url("../assets/arrow1.svg");
@@ -60,24 +47,19 @@
       .gallery-wrapper {
         &_first {
           background-image: url('../assets/image4.webp');
-          transition: all .5s ease-;
           
         }
         &_second {
           background-image: url('../assets/image5.webp');
-          transition: all .5s ease-;
         }
         &_third {
           background-image: url('../assets/image3.webp');
-          transition: all .5s ease-;
         }
         &_fourth {
           background-image: url('../assets/image6.webp');
-          transition: all .5s ease-;
         }
         &_fifth {
           background-image: url('../assets/image1.webp');
-          transition: all .5s ease-;
         }
       }
     }
@@ -89,6 +71,54 @@
         height: 606px;
         width: 445px;
       }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .gallery-section {
+    max-width: $responsive-medium;
+    &__head {
+      position: relative;
+      width: 700px;
+      justify-content: start;
+    }
+    .gallery-slider {
+      &__wrapper {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-section {
+    max-width: $responsive-small;
+    &__title {
+      font-size: 1.5rem;
+    }
+    .gallery-slider {
+      &__wrapper {
+        margin-top: 0;
+      }
+    }
+    &__arrows {
+      width: 90px;
+    }
+    &__arrow_prev{
+      width: 30px;
+    }
+    &__arrow_next {
+      width: 50px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-section {
+    max-width: $responsive-xtra-small;
+    &__head {
+      width: 100%;
     }
   }
 }

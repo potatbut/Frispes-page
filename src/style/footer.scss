@@ -1,7 +1,7 @@
 .footer {
   width: 100%;
   height: 300px;
-  background: #0D2C4A;
+  background: $dark-blue;
   color: #fff;
   padding-top: 50px;
   &__wrapper {
@@ -31,11 +31,10 @@
   &__socials {
     font-size: 24px;
     width: 104px;
-    display: flex;
-    justify-content: space-between;
+    @include flex-space;
     align-items: flex-end;
     :hover {
-      color: #FF5722;
+      color: $brand-color-orange;
     }
   }
   &__column {
@@ -49,6 +48,57 @@
       line-height: 26px;
       color: #FFFFFF;
       margin: 9px auto;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .footer {
+    &__wrapper {
+      width: $responsive-large;
+    }
+    &__container_list {
+      font-size: 0.8rem;
+    }
+  }
+}
+
+
+@media (max-width: 992px) {
+  .footer {
+    &__wrapper {
+      width: $responsive-medium;
+      font-size: 0.8rem;
+    }
+    &__container_list {
+      display: grid;
+      grid-template-columns: 50% 50%;
+      li {
+        line-height: 16px;
+        margin: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    height: auto;
+    &__wrapper {
+      width: $responsive-small;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    &__container_list {
+      margin-top: 10px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    &__wrapper {
+      max-width: $responsive-xtra-small;
     }
   }
 }

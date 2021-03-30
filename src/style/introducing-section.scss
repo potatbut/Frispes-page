@@ -1,25 +1,19 @@
+
 .introducing-section {
-  max-width: 1110px;
-  margin: 50px auto;
+  @include alignment-block;
+  padding-top: 50px;
   &__intro {
-    height: 30px;
     width: 200px;
-    font-size: 20px;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    img {
-      margin: auto;
-    }
+    height: 30px;
+    @include intro-bar;
   }
   &__content {
-    display: flex;
-    justify-content: space-between;
+    @include flex-space;
   }
   &__title{
-    color: #10375C;
+    @include heading;
     font-size: 52px;
     max-width: 667px;
-    font-family: 'Lora', serif;
   }
   &__subtitle {
     max-width: 382px;
@@ -42,7 +36,7 @@
   .slick-dots {
     & .slick-active {
       width: 40px;
-      background-color: #FF5722;
+      background-color: $brand-color-orange;
       opacity: 1;
     }
     bottom: 40px;
@@ -60,18 +54,40 @@
   }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1200px) {
   .introducing-section {
-    max-width: 900px;
-    margin-top: 20px;
+    max-width: $responsive-large;
+  }
+}
+
+@media (max-width: 991px) {
+  .introducing-section {
+      max-width: $responsive-medium;
+      &__content {
+        align-items: center;
+      }
+  }
+}
+
+@media (max-width: 768px) {
+  .introducing-section {
+    max-width: $responsive-small;
+    &__content {
+      display: block;
+    }
     &__title {
-      font-size: 2.2rem;
-      margin-top: 5px;
+      font-size: 1.8rem;
+      margin: 20px 0;
     }
     &__subtitle {
-      margin-bottom: 10px;
-      max-width: 80%;
       font-size: 1rem;
+      line-height: 1.2rem;
+      margin: 20px 0;
     }
+  }
+}
+@media (max-width: 480px) {
+  .introducing-section {
+    max-width: $responsive-xtra-small;
   }
 }
