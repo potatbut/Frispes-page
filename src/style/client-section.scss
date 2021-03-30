@@ -1,24 +1,19 @@
 .client-section {
   max-width: 1110px;
-  margin: auto;
-  margin-top: 100px;
+  @include margin-auto-top;
   margin-bottom: 100px;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  @include wrap-center(center);
   &__title{
     text-align: center;
     width: 800px;
-    font-size: 40px;
     @include heading;
     margin-bottom: 25px;
   }
   &__subtitle {
+    @include subtitle;
     text-align: center;
     width: 800px;
-    width: 452px;
-    font-size: 18px;
-    color: $grey;
     margin-bottom: 25px;
   }
   &__clients {

@@ -3,9 +3,7 @@
   @include alignment-block;
   padding-top: 50px;
   &__intro {
-    width: 200px;
-    height: 30px;
-    @include intro-bar;
+    @include intro-bar(200px);
   }
   &__content {
     @include flex-space;
@@ -43,8 +41,8 @@
     li {
       margin: 0 2px;
       width: 16px;
-      height: 4px;
       background-color: white;
+      height: 4px;
       opacity: 0.5;
       button::before {
         content: '';

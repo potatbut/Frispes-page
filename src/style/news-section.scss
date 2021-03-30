@@ -16,7 +16,6 @@
   &__title{
     text-align: center;
     font-size: 52px;
-    font-size: 40px;
     @include heading;
   }
   &__more a{
@@ -107,8 +106,8 @@
     .news-content {
       margin: auto;
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+      @include wrap-center(center)
+      
     }
   }
 }

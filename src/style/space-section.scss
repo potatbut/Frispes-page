@@ -1,6 +1,6 @@
 .space-section {
   max-width: 1140px;
-  margin: auto;
+  margin: 100px auto;
   &__head {
     max-width: 1110px;
     @include flex-space;
@@ -9,13 +9,10 @@
   &__title{
     text-align: center;
     font-size: 51px;
-    font-size: 40px;
     @include heading;
   }
   &__subtitle {
-    width: 452px;
-    font-size: 18px;
-    color: $grey;
+    @include subtitle;
   }
   @include arrows;
   .space-slider {
@@ -35,11 +32,11 @@
         width: 40px;
         height: 4px;
         background-color: grey;
+        height: 4px;
         opacity: 0.5;
         button::before {
           content: '';
         }
-        
       }
     }
     &__slide {

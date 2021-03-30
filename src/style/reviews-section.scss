@@ -1,8 +1,8 @@
 .reviews-section {
   &__head {
     max-width: 1110px;
-    margin: auto;
     @include flex-space;
+    margin: auto;
     align-items: flex-end;
     margin-bottom: 50px;
   }
@@ -10,9 +10,7 @@
     width: 400px;
   }
   &__intro {
-    width: 160px;
-    height: 30px;
-    @include intro-bar;
+    @include intro-bar(160px);
   }
   &__title {
     @include heading;
@@ -27,12 +25,11 @@
     &__wrapper {
       background-color: $brand-color-dark;
       display: grid;
-      grid-template-rows: 300px 60px;
-      flex-wrap: wrap;
       color: #fff;
+      grid-template-rows: 300px 60px;
+      @include wrap-center(space-around);
       width: 445px;
       height: 393px;
-      justify-content: center;
     }
     &__text {
       margin-top: 47px;
@@ -62,11 +59,11 @@
         width: 40px;
         height: 4px;
         background-color: grey;
+        height: 4px;
         opacity: 0.5;
         button::before {
           content: '';
         }
-        
       }
     }
   }

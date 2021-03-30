@@ -2,9 +2,7 @@
   @include alignment-block;
   margin-top: 100px;
   &__intro {
-    width: 260px;
-    height: 30px;
-    @include intro-bar;
+    @include intro-bar(260px);
   }
   &__head {
     width: 960px;

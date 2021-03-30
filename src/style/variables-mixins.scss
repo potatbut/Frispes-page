@@ -49,13 +49,41 @@ $responsive-xtra-small: 310px;
 @mixin heading {
   color: $brand-color-dark;
   font-family: 'Lora', serif;
+  font-size: 40px;
 }
 
-@mixin intro-bar {
+@mixin intro-bar($width) {
+  width: $width;
   font-size: 20px;
-    display: grid;
-    grid-template-columns: 50% 50%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  height: 30px;
     img {
       margin: auto;
     }
+}
+
+@mixin margin-auto-top {
+  margin: auto;  
+  margin-top: 100px;
+}
+
+@mixin wrap-center($jusctify) {
+  flex-wrap: wrap;
+  justify-content: $jusctify;
+}
+
+@mixin subtitle {
+  width: 452px;
+  font-size: 18px;
+  color: $grey;
+}
+
+@mixin hover-button-orange {
+  &:hover {
+    background-color: $brand-color-orange;
+    color: #fff;
+    -webkit-box-shadow: 5px 5px 17px -5px $brand-color-orange; 
+    box-shadow: 5px 5px 17px -5px $brand-color-orange;
+  }
 }

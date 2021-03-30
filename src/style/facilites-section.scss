@@ -3,12 +3,10 @@
   padding-top: 100px;
   &__intro {
     width: 240px;
-    height: 30px;
-    @include intro-bar;
+    @include intro-bar(240px);
   }
   &__title {
     max-width: 50%;
-    font-size: 40px;
     @include heading;
   }
   &__menu {
@@ -30,12 +28,7 @@
       font-size: 20px;
       align-items: center;
       justify-content: start;
-      &:hover {
-        background: $brand-color-orange;
-        color: #fff;
-        -webkit-box-shadow: 5px 5px 17px -5px $brand-color-orange; 
-        box-shadow: 5px 5px 17px -5px $brand-color-orange;
-      }
+      @include hover-button-orange;
     }
   }
   &__image {

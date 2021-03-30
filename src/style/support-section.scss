@@ -26,19 +26,19 @@
     width: 49%;
     height: 421px;
     background-color: $brand-color-dark;
-    color: #fff;
     display: grid;
+    color: #fff;
+    justify-content: center;
+    
     grid-template-columns: 433px;
     grid-template-rows: 90px 120px 150px;
-    justify-content: center;
     align-items: end;
   }
   &__headline{
-    @include intro-bar;
+    @include intro-bar(217px);
     svg {
       margin: auto;
     }
-    width: 217px;
   }
   &__title {
     font-size: 40px;

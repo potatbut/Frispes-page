@@ -1,8 +1,8 @@
 .faq-section {
   max-width: 1120px;
-  margin: auto;
+  
   display: grid;
-  margin-top: 100px;
+  @include margin-auto-top;
   &__title {
     @include heading;
     font-size: 40px;
@@ -14,9 +14,10 @@
   }
   &__button {
     margin: auto;
+    display: grid;
     width: 150px;
     color: $brand-color-orange;
-    display: grid;
+    
     grid-template-columns: 120px 10px;
   }
   .faq-link {
@@ -43,9 +44,9 @@
     &__button {
       margin: auto;
       display: flex;
-      color: white;
       justify-content: center;
       align-items: center;
+      color: white;
       width: 64px;
       height: 48px;
       background: $brand-color-orange;
@@ -74,8 +75,7 @@
     max-width: $responsive-large;
     display: block;
     &__links {
-      flex-wrap: wrap;
-      justify-content: space-around;
+      @include wrap-center(space-around)
     }
   }
 }
@@ -88,8 +88,7 @@
       font-size: 1.5rem;
     }
     &__links {
-      flex-wrap: wrap;
-      justify-content: space-around;
+      @include wrap-center(space-around)
     }
   }
 }
