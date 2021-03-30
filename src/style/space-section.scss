@@ -17,19 +17,7 @@
     font-size: 18px;
     color: $grey;
   }
-  &__arrows{
-    @include arrows;
-  }
-  &__arrow_prev {
-    content: url("../assets/arrow1.svg");
-    width:54px;
-    height:30px;
-  }
-  &__arrow_next {
-    content: url("../assets/arrow2.svg");
-    width:92px;
-    height:30px;
-  }
+  @include arrows;
   .space-slider {
     &__wrapper {
       height: 420px;

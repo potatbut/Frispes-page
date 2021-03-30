@@ -28,10 +28,22 @@ $responsive-xtra-small: 310px;
 }
 
 @mixin arrows {
-  display: flex;
-  justify-content: space-between;
-  width: 168px;
-  cursor:pointer;
+  &__arrows{
+    display: flex;
+    justify-content: space-between;
+    width: 168px;
+    cursor:pointer;
+  }
+  &__arrow_prev {
+    content: url("../assets/arrow1.svg");
+    width:54px;
+    height:30px;
+  }
+  &__arrow_next {
+    content: url("../assets/arrow2.svg");
+    width:92px;
+    height:30px;
+  } 
 }
 
 @mixin heading {

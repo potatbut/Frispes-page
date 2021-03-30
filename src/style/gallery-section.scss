@@ -23,19 +23,7 @@
     @include heading;
     font-size: 40px;
   }
-  &__arrows{
-    @include arrows;
-  }
-  &__arrow_prev {
-    content: url("../assets/arrow1.svg");
-    width:54px;
-    height:30px;
-  }
-  &__arrow_next {
-    content: url("../assets/arrow2.svg");
-    width:92px;
-    height:30px;
-  }
+  @include arrows;
   .gallery-slider {
     &__wrapper {
       height: 350px;
