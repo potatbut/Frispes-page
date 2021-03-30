@@ -18,11 +18,8 @@
     margin: auto;
     width: 150px;
     color: #FF5722;
-    
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
+    display: grid;
+    grid-template-columns: 120px 10px;
   }
   .faq-link {
     width: 350px;

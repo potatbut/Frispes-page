@@ -60,18 +60,24 @@
       .gallery-wrapper {
         &_first {
           background-image: url('../assets/image4.webp');
+          transition: all .5s ease-out;
+          
         }
         &_second {
           background-image: url('../assets/image5.webp');
+          transition: all .5s ease-out;
         }
         &_third {
           background-image: url('../assets/image3.webp');
+          transition: all .5s ease-out;
         }
         &_fourth {
           background-image: url('../assets/image6.webp');
+          transition: all .5s ease-out;
         }
         &_fifth {
           background-image: url('../assets/image1.webp');
+          transition: all .5s ease-out;
         }
       }
     }
