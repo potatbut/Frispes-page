@@ -88,15 +88,7 @@
         margin-top: 0;
       }
     }
-    &__arrows {
-      width: 90px;
-    }
-    &__arrow_prev{
-      width: 30px;
-    }
-    &__arrow_next {
-      width: 50px;
-    }
+    @include arrows-size;
   }
 }
 

@@ -25,11 +25,8 @@
   &__content_blue {
     width: 49%;
     height: 421px;
-    background-color: $brand-color-dark;
-    display: grid;
-    color: #fff;
+    @include blue-slide;
     justify-content: center;
-    
     grid-template-columns: 433px;
     grid-template-rows: 90px 120px 150px;
     align-items: end;

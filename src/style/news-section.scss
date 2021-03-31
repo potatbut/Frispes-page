@@ -41,14 +41,7 @@
     p {
       margin: 0;
     }
-    &__user {
-      display: grid;
-      grid-template-columns: 70px 200px;
-    }
-    &__img {
-      grid-column: 1;
-      grid-row: 1/3;
-    }
+    @include user-badge;
     &__name {
       font-size: 18px;
       line-height: 28px;

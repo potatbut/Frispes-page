@@ -31,24 +31,9 @@
       width: 100%;
     }
   }
+  @include slider-dots-style(0, 40px, 0);
   .slick-dots {
-    & .slick-active {
-      width: 40px;
-      background-color: $brand-color-orange;
-      opacity: 1;
-    }
     bottom: 40px;
-    li {
-      margin: 0 2px;
-      width: 16px;
-      background-color: white;
-      height: 4px;
-      opacity: 0.5;
-      button::before {
-        content: '';
-      }
-      
-    }
   }
 }
 

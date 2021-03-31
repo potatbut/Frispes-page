@@ -21,44 +21,23 @@
       width: 350px;
       margin: auto;
     }
-    .slick-dots {
-      & .slick-active {
-        width: 40px;
-        background-color: $brand-color-orange;
-        opacity: 1;
-      }
-      li {
-        margin: 0;
-        width: 40px;
-        height: 4px;
-        background-color: grey;
-        height: 4px;
-        opacity: 0.5;
-        button::before {
-          content: '';
-        }
-      }
-    }
+    @include slider-dots-style(0, 40px, 0);
     &__slide {
       .wrapper {
         &_first {
           background-color: $brand-color-dark;
-          display: grid;
           grid-template-rows: 120px 60px 120px auto;
-          align-items: end;
         }
         &_second {
           background-image: url('../assets/image4.webp');
-          display: grid;
-          align-items: end;
         }
         &_third {
           background-image: url('../assets/image5.webp');
-          display: grid;
-          align-items: end;
         }
         &_fourth {
           background-image: url('../assets/image3.webp');
+        }
+        &_first, &_second, &_third, &_fourth {
           display: grid;
           align-items: end;
         }
@@ -170,15 +149,7 @@
     &__subtitle {
       font-size: 1rem;
     }
-    &__arrows {
-      width: 90px;
-    }
-    &__arrow_prev{
-      width: 30px;
-    }
-    &__arrow_next {
-      width: 50px;
-    }
+    @include arrows-size;
   }
 }
 

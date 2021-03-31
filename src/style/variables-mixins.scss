@@ -46,6 +46,18 @@ $responsive-xtra-small: 310px;
   } 
 }
 
+@mixin arrows-size {
+  &__arrows {
+    width: 90px;
+  }
+  &__arrow_prev{
+    width: 30px;
+  }
+  &__arrow_next {
+    width: 50px;
+  }
+}
+
 @mixin heading {
   color: $brand-color-dark;
   font-family: 'Lora', serif;
@@ -87,3 +99,43 @@ $responsive-xtra-small: 310px;
     box-shadow: 5px 5px 17px -5px $brand-color-orange;
   }
 }
+
+@mixin blue-slide {
+  background-color: $brand-color-dark;
+  display: grid;
+  color: #fff;
+}
+
+@mixin slider-dots-style($li-margin, $width, $dots-margin) {
+  .slick-dots {
+    margin: $dots-margin;
+    & .slick-active {
+      width: $width;
+      background-color: $brand-color-orange;
+      opacity: 1;
+    }
+    li {
+      margin: $li-margin;
+      width: 40px;
+      height: 4px;
+      background-color: $grey;
+      height: 4px;
+      opacity: 0.5;
+      button::before {
+        content: '';
+      }
+    }
+  }
+}
+
+@mixin user-badge {
+  &__user {
+    display: grid;
+    grid-template-columns: 70px 200px;
+  }
+  &__img {
+    grid-column: 1;
+    grid-row: 1/3;
+  }
+}
+
